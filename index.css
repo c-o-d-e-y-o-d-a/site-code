@@ -1,0 +1,1180 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:ital@1&display=swap');
+
+:root {
+    --main-dark-bg-color: #0B001A;
+    --main-text-color: white;
+    --project-section-bg: #1E0044;
+    --project-section-card-bg: linear-gradient(95deg, #8338EC 0%, #9C2EF5 100%);
+    --main-font: Montserrat;
+    scroll-behavior: smooth;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    color: white;
+}
+
+#logo-navbar {
+    width: 10dvh;
+    height: 10dvh;
+    margin-left: 4dvw;
+}
+
+body {
+    font-family: 'Chakra Petch', sans-serif;
+    background-color: #0B001A;
+
+
+}
+
+hr {
+    display: inline;
+}
+
+.intro {
+    height: 100dvh;
+    margin-right: 0;
+
+}
+
+.intro video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.intro h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 60px;
+    color: white;
+}
+
+#navbar {
+    background-color: var(--main-dark-bg-color);
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    font-size: 0.6rem;
+    display: none;
+    grid-template-columns: 1fr 5fr;
+}
+
+#navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: right;
+    padding: 1rem 0;
+    padding-right: 10%;
+}
+
+#navbar li {
+    padding-top: 0.5%;
+    margin-left: 7%;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+section {
+    height: 100vh;
+    color: black;
+}
+
+section h1 {
+    padding-top: 300px;
+    text-align: center;
+    font-size: 60px;
+}
+
+#services {
+    padding: 30px 30px;
+    height: 150px;
+}
+
+.sub-title {
+    text-align: center;
+    margin-top: 120px;
+}
+
+.sub-title h1 {
+    font-size: 36px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.services-list div {
+    background: #000000;
+    padding: 100px;
+    font-size: 13px;
+    font-weight: 300;
+    color: #fff;
+    border-radius: 10px;
+    transition: 0.5s, transform 0.5s;
+}
+
+.services-list div i {
+    font-size: 50px;
+    margin-bottom: 30px;
+
+}
+
+.services-list div h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.services-list div a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.services-list div:hover {
+    background: rgb(15, 125, 37);
+    transform: translate(-10px);
+}
+
+
+.containerr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f3f3f3;
+    position: relative;
+}
+
+.big-circle {
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    background-color: #5d5d5d;
+    border-radius: 50%;
+    top: -1px;
+    right: -150px;
+}
+
+.form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.contact-form {
+    flex: 1;
+    padding: 30px;
+    position: relative;
+}
+
+.contact-form .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.input-containerr {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    transition: background-color 0.3s;
+}
+
+.input:focus {
+    background-color: #e0e0e0;
+    outline: none;
+}
+
+.label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    background-color: #fff;
+    padding: 0 5px;
+    font-size: 14px;
+    color: #777;
+    pointer-events: none;
+    transition: transform 0.3s, font-size 0.3s, color 0.3s;
+}
+
+.input:focus+.label,
+.input:not(:placeholder-shown)+.label {
+    transform: translateY(-80%) translateX(-10%);
+    font-size: 12px;
+    color: #333;
+}
+
+.textarea {
+    display: block;
+}
+
+.textarea .input {
+    resize: none;
+}
+
+.btn {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #222;
+}
+
+
+.icon {
+    width: 28px;
+    margin-right: 0.7rem;
+}
+
+.social-media {
+    padding: 2rem 0 0 0;
+}
+
+.social-media p {
+    color: #333;
+    margin-left: -150px;
+    margin-top: 200px;
+}
+
+.social-icons {
+    display: flex;
+    margin-top: 0.5rem;
+}
+
+.social-icons a {
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    background: linear-gradient(45deg, #ffffff, #ffffff);
+    color: #000000;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 0.5rem;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    transform: scale(1.05);
+}
+
+
+.ABT {
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: 50px;
+}
+
+.team {
+
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+    background-color: rgb(255, 255, 255);
+}
+
+.member {
+    text-align: center;
+    margin: 1rem;
+    flex-basis: calc(33.33% - 2rem);
+}
+
+.circle {
+    width: 160px;
+    height: 160px;
+    background-color: black;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1rem;
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.member h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.member p {
+    color: #777;
+}
+
+
+.myButtonn {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.myButtonn:hover {
+    background-color: #ffffff;
+}
+
+
+
+
+
+
+
+/*
+About us section styling starts
+*/
+
+
+.about-us {
+    margin-top: 10dvh;
+    color: black;
+    margin-bottom: 7dvh;
+}
+
+.aboutUs-container {
+    padding: 40px;
+    border-radius: 40px;
+
+    background-image: url('./Images/about-us-background-image.png');
+    background-size: cover;
+    background-repeat: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(39dvw, 1fr));
+    margin: 0 auto;
+    gap: 6dvw;
+    width: 95dvw;
+
+
+
+
+}
+
+
+
+.right-part {
+
+    justify-self: center;
+
+}
+
+.left-part {
+    display: grid;
+    grid-template-rows: 1fr 1.6fr 0.5fr;
+    color: #000;
+
+
+}
+
+.upper {
+    display: grid;
+    grid-template-rows: 1fr 4fr 2fr;
+    color: #000;
+
+
+
+
+}
+
+.middle {}
+
+.paragraphText {
+    display: flex;
+    align-items: center;
+    margin-top: 7dvh;
+    color: #000;
+}
+
+.lower {}
+
+
+.mobtech-heading {
+    font-size: 0.8rem;
+    color: #000;
+
+}
+
+.aboutUs-heading {
+    font-size: 3rem;
+    font-weight: 400;
+    color: #000;
+}
+
+.lowerTags {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 60%;
+    color: #000;
+}
+
+.tag {
+    display: flex;
+    padding: 0 2px 0 3px;
+
+    align-items: center;
+    justify-content: center;
+    border-radius: 19.169px;
+    border: 1px solid #0B001A;
+    margin-right: 1dvw;
+    color: #000;
+    font-size: 1rem;
+    box-shadow: 12px -5px 46px -20px rgba(214, 128, 227, 0.5);
+    -webkit-box-shadow: 12px -5px 46px -20px rgba(214, 128, 227, 0.5);
+    -moz-box-shadow: 12px -5px 46px -20px rgba(214, 128, 227, 0.5);
+
+}
+
+.lower {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 20%;
+    margin-top: min(2dvh, 10px);
+
+}
+
+.social-link {
+    display: flex;
+    width: 6dvh;
+    height: 6dvh;
+    padding: 4% 4%;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid #0B001A;
+    justify-content: center;
+    background: inherit;
+    fill: #E9DEFF;
+    stroke-width: 1px;
+    stroke: #0B001A;
+    filter: drop-shadow(0px 0px 3.1481480598449707px rgba(162, 45, 247, 0.10)) drop-shadow(0px 0px 6.518518447875977px rgba(162, 45, 247, 0.10)) drop-shadow(0px 0px 13px rgba(162, 45, 247, 0.10)) drop-shadow(0px 0px 25.481481552124023px rgba(162, 45, 247, 0.10)) drop-shadow(0px 0px 46.85185241699219px rgba(162, 45, 247, 0.10)) drop-shadow(0px 0px 19px rgba(162, 45, 247, 0.10));
+    margin-right: 1dvh;
+
+}
+
+.social-link:hover {
+    cursor: pointer;
+}
+
+#right-side-image {
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+    max-height: 70dvh;
+    max-width: 60dvw;
+
+
+
+}
+
+.social-logo {
+    width: 70%;
+    height: 70%;
+}
+
+
+/*
+About us section styling ends
+*/
+
+
+
+/*
+Project showcase styling section starts
+*/
+#projectShowcase {}
+
+.project_container {
+    border-radius: 40px;
+    background: #1E0044;
+    width: 96dvw;
+    margin-left: 1.4dvw;
+    padding: 40px;
+    border-radius: 40px;
+
+
+
+
+    display: grid;
+    grid-template-rows: 1fr 4fr 0.5fr;
+    margin: 0 auto;
+
+    width: 95dvw;
+}
+
+.heading-work {
+    width: 100%;
+    text-align: center;
+    border-bottom: white;
+    border-top: 1px solid white;
+    line-height: 0.1em;
+    margin: 10px 0 20px;
+    font-size: 2.5rem;
+}
+
+.heading-work span {
+    background: var(--project-section-bg);
+    padding: 0 10px;
+
+}
+
+.project-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25dvw, 1fr));
+    column-gap: 5dvw;
+    margin-top: 10dvh;
+
+}
+
+.card {
+    display: grid;
+    grid-template-rows: 1fr 3.5fr 1fr;
+    height: 50dvh;
+    border-radius: 20px;
+    background: linear-gradient(95deg, #8338EC 0%, #9C2EF5 100%);
+    text-align: center;
+    margin-bottom: 4dvh;
+    padding-bottom: 1dvh;
+}
+
+.card:hover {
+    background: (92deg, #7840c8 0%, #9C2EF5 100%);
+
+}
+
+
+
+
+.check-out-button {
+    border-radius: 19.169px;
+    border: 1px solid #FFF;
+    align-items: center;
+
+    justify-self: center;
+    color: #ffffff;
+    padding: 1dvh 1.5dvh 1dvh 1.5dvh;
+    background-color: var(--project-section-card-bg);
+
+}
+
+.check-out-button:hover {
+    cursor: pointer;
+    opacity: 0.6;
+    box-shadow: 8px -7px 49px -3px rgba(199, 108, 214, 0.64);
+    -webkit-box-shadow: 8px -7px 49px -3px rgba(199, 108, 214, 0.64);
+    -moz-box-shadow: 8px -7px 49px -3px rgba(199, 108, 214, 0.64);
+}
+
+.show-more {
+    justify-self: center;
+    margin-top: 5dvh;
+
+}
+
+.show-more-button {
+    color: rgb(245, 245, 245);
+    padding: 10px;
+    border-radius: 19.169px;
+    border: 1px solid #000;
+    background: #1E0044;
+    box-shadow: 0px 0px 3.1481480598449707px 0px rgba(162, 45, 247, 0.10), 0px 0px 6.518518447875977px 0px rgba(162, 45, 247, 0.10), 0px 0px 13px 0px rgba(162, 45, 247, 0.10), 0px 0px 25.481481552124023px 0px rgba(162, 45, 247, 0.10), 0px 0px 46.85185241699219px 0px rgba(162, 45, 247, 0.10), 0px 0px 19px 9px rgba(162, 45, 247, 0.10);
+
+
+}
+
+.card-heading {
+    font-size: 1.7rem;
+    justify-self: start;
+    margin-top: 2.5dvh;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.32px;
+    margin-left: 2.2dvw;
+
+}
+
+.card-content {
+    font-size: 0.8rem;
+    justify-self: start;
+    margin-top: 9dvh;
+    margin-left: 2dvw;
+    overflow-wrap: break-word;
+
+}
+
+.show-more-button:hover {
+    background: #3f0887;
+    cursor: pointer;
+
+}
+
+
+
+
+/*
+Project showcase styling section ends
+*/
+
+
+/*
+Meet the team section styling starts
+*/
+#meetTheTeam {
+    margin-top: 20dvh;
+}
+
+.meetTheTeam-container {
+    padding: 40px;
+    border-radius: 40px;
+
+    background-image: url('./Images/about-us-background-image.png');
+    background-size: cover;
+    background-repeat: none;
+    display: grid;
+    
+    margin: 0 auto;
+    gap: 6dvw;
+    width: 95dvw;
+    text-align: center;
+
+}
+
+.heading-meetTeam {
+    font-size: 2.8rem;
+    color: #000;
+    font-weight: 600;
+
+
+}
+
+.team-middle {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30dvw, 1fr));
+    row-gap: 3dvh;
+
+    column-gap: 4dvw;
+    padding: 0 2dvw 0 2dvw;
+}
+
+.ShowMoreTeam {
+    border-radius: 19.169px;
+    border: 1px solid #000;
+    background: #1E0044;
+    box-shadow: 0px 0px 3.14815px 0px rgba(162, 45, 247, 0.10), 0px 0px 6.51852px 0px rgba(162, 45, 247, 0.10), 0px 0px 13px 0px rgba(162, 45, 247, 0.10), 0px 0px 25.48148px 0px rgba(162, 45, 247, 0.10), 0px 0px 46.85185px 0px rgba(162, 45, 247, 0.10), 0px 0px 19px 9px rgba(162, 45, 247, 0.10);
+    padding: 1dvh 2dvh 1dvh 2dvh;
+    align-items: center;
+    font-size: 1.1rem;
+
+
+}
+
+.ShowMoreTeam:hover {
+    background: #4a0f96;
+    cursor: pointer;
+}
+
+.card-team {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 20px;
+    background: linear-gradient(93deg, #8338EC 10.4%, #9C2EF5 101.06%);
+    height: 48dvh;
+
+}
+
+.circle-photo {
+    border-radius: 50%;
+    width: 24dvh;
+    height: 24dvh;
+    align-content: center;
+    margin-left: 2dvw;
+}
+
+.right-side {
+    align-self: center;
+
+}
+
+.left-side {
+    display: grid;
+    grid-template-rows: 1fr 0.7fr 5fr;
+
+}
+
+.desig {
+    font-size: 1rem;
+    margin-bottom: 1dvh;
+}
+
+.team-member-name {
+    font-size: 1.2rem;
+    margin-top: 0.7dvh;
+    justify-self: center;
+}
+
+/*
+Meet the team section styling ends
+*/
+
+/*
+contact us section starts
+*/
+
+#contactUs {
+    margin-top: 50dvh;
+    margin-left: 1.6dvw;
+
+
+    border-radius: 40px;
+    background: #1E0044;
+    width: 95dvw;
+    justify-self: center;
+    padding: 2dvh 2dvh 20dvh 19dvh;
+    height: 110dvh;
+}
+
+.contactUs-container {
+    display: grid;
+    grid-template-rows: 1fr 3.2fr;
+}
+
+.heading-of-form {
+    text-align: center;
+    margin-bottom: 4dvh;
+
+}
+
+.heading-of-form-text {
+    font-size: 5rem;
+
+
+}
+
+.form-section {
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+    column-gap: 8dvw;
+    margin-bottom: 1dvh;
+}
+
+.left-side-form {
+
+    justify-self: end;
+    margin-right: 3dvw;
+    max-height: min(60dvh, 550px);
+    display: grid;
+    grid-template-rows: ;
+    color: #FFF8F8;
+    font-family: Noe Display;
+
+}
+
+.lets-talk-text {
+    font-size: 3.1rem;
+    margin-bottom: 1.3dvh;
+    font-weight: 600;
+
+}
+
+.right-side-form {
+
+    max-height: min(60dvh, 450px);
+
+}
+
+.form-style {}
+
+label {
+    display: block;
+    font-size: 0.8rem;
+    margin-bottom: 1.3dvh;
+}
+
+input {
+    width: min(80%, 40dvw);
+    height: 2.3rem;
+    margin-bottom: 5%;
+    color: black;
+    resize: none;
+}
+
+textarea {
+    width: min(80%, 40dvw);
+}
+
+.messageInput {
+    height: 25dvh;
+}
+
+.talk-image {}
+
+#image-form {
+    height: 20dvh;
+    width: 20dvh;
+}
+
+.big-heading {
+    font-size: 2rem;
+    margin-top: 2dvh;
+    font-weight: 500;
+    margin-bottom: 0.2dvh;
+}
+
+.small-heading {
+    margin-bottom: 0.4rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+a:hover {
+    color: #8338EC;
+    font-style: oblique;
+}
+
+.socials {
+    margin-top: 2dvh;
+    font-weight: 400;
+}
+
+#sendButton {
+    display: block;
+    font-size: large;
+    color: #ffffff;
+    padding: 4px 4px 4px 8px;
+    border-radius: 19.169px;
+    border: 1px solid #000;
+    background: #1E0044;
+    box-shadow: 0px 0px 3.1481480598449707px 0px rgba(162, 45, 247, 0.10), 0px 0px 6.518518447875977px 0px rgba(162, 45, 247, 0.10), 0px 0px 13px 0px rgba(162, 45, 247, 0.10), 0px 0px 25.481481552124023px 0px rgba(162, 45, 247, 0.10), 0px 0px 46.85185241699219px 0px rgba(162, 45, 247, 0.10), 0px 0px 19px 9px rgba(162, 45, 247, 0.10);
+
+
+
+}
+
+#sendButton {
+    margin-top: 2dvh;
+    margin-bottom: 3dvh;
+}
+
+.input-form {
+    color: #000;
+    font-size: 1rem;
+}
+
+#social-logo {
+    height: 3dvh;
+    width: 3dvh;
+}
+
+#sendButton:hover {
+    background: var(--project-section-bg);
+    cursor: pointer;
+    border: 1px solid white;
+
+}
+
+/*
+contact us section ends
+*/
+
+/* Ensure all parent elements have proper sizing */
+#animation-mobile,
+.intro-video {
+    height: 100%;
+}
+
+/* Set video dimensions and styling */
+#club-intro-vid {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    object-fit: cover;
+    /* Ensure the video covers the entire container */
+
+}
+
+/* Adjust margin for better spacing */
+#animation-mobile {
+    margin-bottom: 0;
+    /* You can adjust this value as needed */
+}
+
+/*
+media queri
+*/
+
+/* Mobile devices up to 480px width */
+@media (max-width: 480px) and (min-width: 321px) {
+    .intro h1{
+        font-size: 2.2rem;
+    }
+
+
+    .heading-of-form-text {
+        font-size: 3rem;
+    }
+
+    #contactUs {
+        height: 120vh;
+        
+        margin-top: 140dvh;
+        
+    }
+
+    .left-side-form {
+        margin-left: 0;
+        /* Reset margin for larger screens */
+    }
+
+    .form-section {
+        display: grid;
+        
+
+
+    }
+    .heading-of-form{
+        margin-left: 0;
+    }
+    .heading-of-form-text{
+        margin-left: 0;
+    }
+
+    .left-side-form {
+        display: none;
+    }
+
+    .right-side-form {
+        width: 80dvw;
+       
+    }
+
+    .tag {
+        font-size: 0.8rem;
+    }
+
+    .input-form {
+        width: 50dvh;
+    }
+
+    #sendButton {
+        margin-top: 2dvh;
+    }
+
+    /*
+    project showcase styling starts
+    */
+
+    #projectShowcase {
+        margin-top: 60dvh;
+        margin-bottom: 140dvh
+    }
+
+    .heading-work {
+        font-size: 2rem
+    }
+
+    .project-card-container {
+        grid-template-columns: repeat(auto-fill, minmax(60dvw, 1fr));
+
+    }
+
+    .card {
+        height: 45dvw;
+        padding-bottom: 3dvh;
+    }
+
+    /*
+    meet the team section starts*/
+    #meetTheTeam {
+        margin-top: 90dvh;
+    }
+    .team-middle{
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: repeat(auto-fill, minmax(40dvw, 1fr));
+    }
+    .card-team{
+        width: 80dvw;
+       
+        
+    }
+
+
+
+}
+
+/* Smartphones, portrait iPhone, portrait 320x480 phones (Android) */
+@media (max-width: 320px) {
+    .heading-of-form-text {
+        font-size: 2rem;
+        /* Adjust font size for smaller screens */
+    }
+
+    #contactUs {
+        height: 150vh;
+        grid-template-columns: repeat(auto-fill, minmax(39vw, 1fr));
+    }
+
+    .left-side-form {
+        margin-left: 5vw;
+    }
+}
+/*
+media queries for medium sized devices
+*/
+
+@media (min-width:600px) and (max-width:1024px) {
+    .intro h1 {
+            font-size: 2.2rem;
+        }
+    
+    
+        .heading-of-form-text {
+            font-size: 3rem;
+        }
+    
+        #contactUs {
+            height: 120vh;
+    
+            margin-top: 140dvh;
+    
+        }
+        .contactUs-container{
+            width: 100%;
+            height: 100%;
+            grid-template-rows: 1fr 6fr;
+        }
+    
+        .left-side-form {
+            margin-left: 0;
+            /* Reset margin for larger screens */
+        }
+    
+        .form-section {
+            display: grid;
+    
+    
+    
+        }
+    
+        .heading-of-form {
+            margin-left: 0;
+            justify-self: center;
+        }
+    
+        .heading-of-form-text {
+            margin-left: 0;
+            justify-self: center;
+        }
+    
+        .left-side-form {
+            display: none;
+        }
+    
+        .right-side-form {
+            width: 80dvw;
+            margin-left: 20dvw;
+    
+        }
+    
+        .tag {
+            font-size: 0.8rem;
+        }
+    
+        .input-form {
+            width: 50dvh;
+        }
+    
+        #sendButton {
+            margin-top: 2dvh;
+        }
+    
+        /*
+        project showcase styling starts
+        */
+    
+        #projectShowcase {
+            margin-top: 80dvh;
+            margin-bottom: 220dvh
+        }
+    
+        .heading-work {
+            font-size: 2rem
+        }
+    
+        .project-card-container {
+            grid-template-columns: repeat(auto-fill, minmax(30dvw, 1fr));
+    
+        }
+    
+        .card {
+            height: 45dvw;
+            padding-bottom: 2dvh;
+        }
+    
+        /*
+        meet the team section starts*/
+        #meetTheTeam {
+            margin-top: 90dvh;
+        }
+  
+}
+
+/*
+animation video intro
+
+*/
