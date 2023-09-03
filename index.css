@@ -67,10 +67,10 @@ hr {
     align-items: center;
     background-color: black;
     padding: 1rem 4%;
-    position: fixed;
+    position: fixed;    
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100dvw;
     z-index: 40;
     font-size: 1.5rem;
     box-shadow: 0 1px 2px rgba(23, 101, 174, 0.1);
@@ -622,6 +622,7 @@ Meet the team section styling starts
 */
 #meetTheTeam {
     margin-top: 20dvh;
+    margin-bottom: 170dvh;
 }
 
 .meetTheTeam-container {
@@ -906,6 +907,9 @@ media queri
 
 /* Mobile devices up to 480px width */
 @media (max-width: 480px) and (min-width: 321px) {
+    /* navbar styling starts */
+
+
     .intro h1{
         font-size: 2.2rem;
     }
@@ -913,6 +917,13 @@ media queri
 
     .heading-of-form-text {
         font-size: 3rem;
+    }
+
+    #navbar-container{
+        
+    }
+    #wrapper{
+        
     }
 
     #contactUs {
@@ -1036,7 +1047,7 @@ media queries for medium sized devices
         #contactUs {
             height: 120vh;
     
-            margin-top: 140dvh;
+            margin-top: 250dvh;
     
         }
         .contactUs-container{
