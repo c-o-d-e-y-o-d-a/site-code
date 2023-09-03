@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:ital@1&display=swap');
 
 :root {
-    --main-dark-bg-color: #0B001A;
+    --main-dark-bg-color: black;
     --main-text-color: white;
     --project-section-bg: #1E0044;
     --project-section-card-bg: linear-gradient(95deg, #8338EC 0%, #9C2EF5 100%);
@@ -15,21 +15,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
     color: white;
 }
 
-#logo-navbar {
-    width: 10dvh;
-    height: 10dvh;
-    margin-left: 4dvw;
+#aboutUs,
+#projectShowcase,
+#meetTheTeam,
+#contactUs {
+    scroll-margin-top: 120px; 
 }
 
 body {
     font-family: 'Chakra Petch', sans-serif;
-    background-color: #0B001A;
-
-
+    background-color: var(--main-dark-bg-color);
 }
 
 hr {
@@ -58,29 +56,39 @@ hr {
     color: white;
 }
 
-#navbar {
-    background-color: var(--main-dark-bg-color);
-    color: white;
+#wrapper {
+    position: relative;
+    margin-top: 12px; 
+}
+
+#navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 1rem 4%;
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
-    z-index: 1000;
-    font-size: 0.6rem;
-    display: none;
-    grid-template-columns: 1fr 5fr;
+    z-index: 40;
+    font-size: 1.5rem;
+    box-shadow: 0 1px 2px rgba(23, 101, 174, 0.1);
+}
+
+#logo-navbar {
+    width: 10dvh;
 }
 
 #navbar ul {
     list-style: none;
     display: flex;
-    justify-content: right;
-    padding: 1rem 0;
-    padding-right: 10%;
+    justify-content: flex-end;
+    margin: 0;
 }
 
 #navbar li {
-    padding-top: 0.5%;
-    margin-left: 7%;
+    margin-left: 100px; /* Adjust as needed for spacing */
 }
 
 #navbar a {
@@ -89,7 +97,6 @@ hr {
     font-weight: bold;
     font-size: 1.2rem;
 }
-
 section {
     height: 100vh;
     color: black;
@@ -117,67 +124,9 @@ section h1 {
     padding-top: 20px;
 }
 
-.services-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
-}
-
-.services-list div {
-    background: #000000;
-    padding: 100px;
-    font-size: 13px;
-    font-weight: 300;
-    color: #fff;
-    border-radius: 10px;
-    transition: 0.5s, transform 0.5s;
-}
-
-.services-list div i {
-    font-size: 50px;
-    margin-bottom: 30px;
-
-}
-
-.services-list div h2 {
-    font-size: 30px;
-    font-weight: 500;
-    margin-bottom: 15px;
-}
-
-.services-list div a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 12px;
-    margin-top: 20px;
-    display: inline-block;
-}
-
-.services-list div:hover {
-    background: rgb(15, 125, 37);
-    transform: translate(-10px);
-}
 
 
-.containerr {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f3f3f3;
-    position: relative;
-}
 
-.big-circle {
-    position: absolute;
-    width: 450px;
-    height: 450px;
-    background-color: #5d5d5d;
-    border-radius: 50%;
-    top: -1px;
-    right: -150px;
-}
 
 .form {
     background-color: #fff;
@@ -205,7 +154,6 @@ section h1 {
 
 .input-containerr {
     position: relative;
-    margin-bottom: 30px;
 }
 
 .input {
@@ -274,13 +222,13 @@ section h1 {
 }
 
 .social-media {
-    padding: 2rem 0 0 0;
+    padding: 1rem 0;
 }
 
 .social-media p {
-    color: #333;
-    margin-left: -150px;
-    margin-top: 200px;
+    padding: 1rem 0;color: #333;
+    margin-left: 0; 
+    margin-top: 10px; 
 }
 
 .social-icons {
@@ -380,7 +328,7 @@ About us section styling starts
 
 
 .about-us {
-    margin-top: 10dvh;
+    margin-top: 0;
     color: black;
     margin-bottom: 7dvh;
 }
@@ -397,9 +345,6 @@ About us section styling starts
     margin: 0 auto;
     gap: 6dvw;
     width: 95dvw;
-
-
-
 
 }
 
@@ -721,7 +666,6 @@ Meet the team section styling starts
     align-items: center;
     font-size: 1.1rem;
 
-
 }
 
 .ShowMoreTeam:hover {
@@ -735,8 +679,8 @@ Meet the team section styling starts
     border-radius: 20px;
     background: linear-gradient(93deg, #8338EC 10.4%, #9C2EF5 101.06%);
     height: 48dvh;
-
 }
+
 
 .circle-photo {
     border-radius: 50%;
@@ -752,9 +696,11 @@ Meet the team section styling starts
 }
 
 .left-side {
-    display: grid;
-    grid-template-rows: 1fr 0.7fr 5fr;
-
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    height: 100%; 
+    padding: 1rem; 
 }
 
 .desig {
@@ -764,8 +710,8 @@ Meet the team section styling starts
 
 .team-member-name {
     font-size: 1.2rem;
-    margin-top: 0.7dvh;
-    justify-self: center;
+    margin-top: 1px;
+    text-align: center; 
 }
 
 /*
@@ -934,8 +880,8 @@ contact us section ends
 
 /* Ensure all parent elements have proper sizing */
 #animation-mobile,
-.intro-video {
-    height: 100%;
+#animation-mobile {
+    height: 100%; 
 }
 
 /* Set video dimensions and styling */
