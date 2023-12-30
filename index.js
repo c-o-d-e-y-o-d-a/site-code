@@ -38,7 +38,7 @@ let scene2 = new ScrollMagic.Scene({
   .addTo(controller);
 
 //Video Animation
-let accelamount = 0.1;
+let accelamount = 0.2;
 let scrollpos = 0;
 let delay = 0;
 
@@ -51,4 +51,4 @@ setInterval(() => {
   console.log(scrollpos, delay);
 
   video.currentTime = delay;
-}, 33.3);
+}, 39);
